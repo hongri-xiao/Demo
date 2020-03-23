@@ -128,4 +128,31 @@ fun testUploadFile() {
 
     }
 
+
+    /**
+     * 通过cmd 提交代码到gitHub
+     *
+     *  //将当前目录下所有文件添加到缓存区
+     *   git add ./
+     *
+     *  //查看是否还有为跟踪的文件
+     *   git status
+     *
+     *  //提交到本地
+     *  git commit -m "init"
+     *
+     * //关联到远程仓库
+     * git remote add origin https://github.com/xiaoguanghong/Demo.git
+     *
+     * //提交到远程仓库
+     * git push -u origin master
+     *
+     *
+     * //修改后添加文件
+     *  git commit -m "add file"
+     *
+     * //push , 回车后输入用户名和密码
+     *  git push -u origin master
+     */
+
 }
