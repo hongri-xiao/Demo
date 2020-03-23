@@ -1,0 +1,153 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion   rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion       rootProject.ext.android.minSdkVersion
+        targetSdkVersion    rootProject.ext.android.targetSdkVersion
+        versionCode         rootProject.ext.android.versionCode
+        versionName         rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "boolean","LOG","true"
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    /*dataBinding {
+        enabled = true
+    }*/
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    //配置Log输出
+    buildTypes {
+        debug {
+            buildConfigField "boolean","LOG","true"
+        }
+        release {
+            buildConfigField "boolean","LOG","true"
+        }
+    }
+
+
+
+
+
+
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    api rootProject.ext.dependencies.appcompatV7
+    api rootProject.ext.dependencies.constraint
+    api rootProject.ext.dependencies.recyclerview
+    //网络请求
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies.rxandroid
+    api rootProject.ext.dependencies.gson
+    api rootProject.ext.dependencies.converterGson
+    api rootProject.ext.dependencies.converterScalars
+    api rootProject.ext.dependencies.adapterRxjava
+
+
+   /* implementation(rootProject.ext.dependencies.converterGson) {
+        exclude group: 'com.squareup.retrofit'
+        exclude group: 'com.google.code.gson'
+    }*/
+    /*implementation(rootProject.ext.dependencies.adapterRxjava) {
+        exclude group: 'com.squareup.retrofit'
+        exclude group: 'com.squareup.okhttp3'
+        exclude group: 'io.reactivex.rxjava2'
+    }*/
+    //状态栏
+    implementation(rootProject.ext.dependencies.barlibrary) {
+        exclude group: 'com.android.support'
+    }
+
+    //基础代码
+    api(rootProject.ext.dependencies.util_code) {
+        exclude group: 'com.android.support'
+    }
+
+    //权限
+    /*implementation(rootProject.ext.dependencies.permission) {
+        exclude group: 'com.android.support'
+    }*/
+
+    //存储数据
+    implementation(rootProject.ext.dependencies.hawk) {
+        exclude group: 'com.google.code.gson'
+    }
+
+
+    //aac
+    //api rootProject.ext.dependencies.lifecycle
+    //api rootProject.ext.dependencies.lifecycle_java8
+    api rootProject.ext.dependencies.eventBus
+    //悬浮窗权限
+   // api rootProject.ext.dependencies.floatPermission
+    //api rootProject.ext.dependencies.photoView
+    //api rootProject.ext.dependencies.roundImageView
+    //api rootProject.ext.dependencies.uCrop
+    //api rootProject.ext.dependencies.transform
+    //api rootProject.ext.dependencies.transitionseverywhere
+    //api rootProject.ext.dependencies.zxing
+    //api(rootProject.ext.dependencies.zxing_add) { transitive = false }
+
+    api 'com.umeng.analytics:analytics:6.1.4'
+
+    //api rootProject.ext.dependencies.baseAdapter
+
+    api rootProject.ext.dependencies.niceDialog
+
+    api rootProject.ext.dependencies.fastjson
+
+   // api 'com.danikula:videocache:2.7.1'
+//    api 'org.java-websocket:Java-WebSocket:1.3.9'
+
+    api rootProject.ext.dependencies.glide
+
+    api rootProject.ext.dependencies.permission
+
+    api rootProject.ext.dependencies.dsbridge
+
+    //api rootProject.ext.dependencies.BackgroundLibrary
+
+    api rootProject.ext.dependencies.texturevideoview
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //api "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+    // compile'com.qmuiteam:qmui:1.0.6'
+
+    //https://github.com/zhou-you/RxEasyHttp
+    api "com.zhouyou:rxeasyhttp:2.1.5"
+
+
+    
+   // api 'com.github.nanchen2251:ScreenRecordHelper:1.0.2'
+
+
+    //https://github.com/Curzibn/Luban
+    api 'top.zibin:Luban:1.1.8'
+
+}
+repositories {
+    mavenCentral()
+}

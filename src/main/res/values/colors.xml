@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#b1b3b9</color>
+    <color name="colorPrimaryDark">#37373a</color>
+    <color name="colorAccent">#acacac</color>
+
+    <color name="line_small_gray">#e8e8e9</color>
+    <color name="line_gray">#eaeaea</color>
+    <color name="line_more_gray">#a0a0a0</color>
+
+    <color name="bg_red">#af2e1f</color>
+    <color name="bg_white">#ffffff</color>
+    <color name="bg_green">#078283</color>
+    <color name="bg_gray">#7B7979</color>
+    <color name="bg_blue">#0000FF</color>
+    <color name="bg_small_gray">#f6f6f6</color>
+    <color name="bg_alpha_gray">#55888888</color>
+    <color name="bg_alpha_black">#aa000000</color>
+    <color name="color_dialog_bg">#FFFFFF</color>
+    <color name="color_dialog_title">#2674FE</color>
+
+    <color name="tv_white">#ffffff</color>
+    <color name="tv_black">#000000</color>
+    <color name="tv_gray">#b1b3b9</color>
+    <color name="tv_more_gray">#878787</color>
+    <color name="tv_blue">#1ba3e1</color>>
+    <color name="tv_small_blue">#49de63</color>
+    <color name="tv_blue_connected">#247032</color>
+    <color name="tv_green">#339295</color>
+    <color name="tv_red">#ffbe2221</color>
+
+    <color name="btn_tv_press">#2674FE</color>
+    <color name="btn_tv_normal">#FFFFFF</color>
+
+    <drawable name="transparent">#00000000</drawable>
+    <color name="color_transparent">#00000000</color>
+    <color name="tv_dialog_left">#BFBFC2</color>
+
+    <color name="text_brown">#9E794D</color>
+
+</resources>
