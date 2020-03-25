@@ -141,7 +141,7 @@ fun testUploadFile() {
      *  //提交到本地
      *  git commit -m "init"
      *
-     * //关联到远程仓库
+     * //关联到远程仓库(码云仓库账号:xiaoguanghong, 密码: 820801xxx)
      * git remote add origin https://github.com/xiaoguanghong/Demo.git
      *
      * //提交到远程仓库
